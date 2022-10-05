@@ -50,6 +50,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.qheader{
+    margin: 0 20px;
+}
 
 .title {
     text-align: center;

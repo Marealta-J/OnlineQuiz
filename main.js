@@ -1,6 +1,6 @@
 const questions = [
 {
-    questions: "The second highest mountain in the worlds?",
+    questions: "The second highest mountain in the world?",
     answers: ["Everest", "Beluga", "K2", "Elbrus"],
     correct: 3,
 },
@@ -14,4 +14,32 @@ const questions = [
     answers: ["Quadro RTX 8000", "RTX Titan X", "Radeon VEGA9", "RTX 4070"],
     correct: 4,
 }
-]
+];
+const headerContainer = document.querySelector('#qheader');
+const listContainer = document.querySelector('#aList');
+const submitBtn = document.querySelector('#btn')
+
+let score = 0;
+let questionIndex = 0;
+
+clearPage();
+showQuestion();
+
+function clearPage(){
+    headerContainer.innerHTML = '';
+    listContainer.innerHTML = '';
+}
+
+function showQuestion(){
+    const headerTemplate = `<h2 class="title">%title%</h2>`;
+    
+    const title = headerTemplate.replace('%title%', questions[questionIndex]['questions'])
+
+    headerContainer.innerHTML = title;
+
+    for (item of questions[questionIndex]['answers']){
+        console.log(item);
+    }
+
+    
+}
